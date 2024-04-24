@@ -1,20 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import BgTabs from "./src/BgTabs";
+import StoredTabs from "./src/storedTabs";
 
 const AppLayout = () => {
   return (
-    <>
-      <div className="heading">
-        <h2>
-          Tab<span>List</span>
-        </h2>
-        <p className="subtext">Manage your tabs</p>
+    <div className="p-3">
+      <div>
+        <h2 className="text-3xl">Tab List</h2>
+        <p className="text-base">Manage your tabs</p>
       </div>
-      <div className="app-container">
+      <div className="">
         <BgTabs />
+        <StoredTabs />
       </div>
-    </>
+    </div>
   );
 };
 

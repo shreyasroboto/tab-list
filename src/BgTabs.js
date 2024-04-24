@@ -19,7 +19,7 @@ const BgTabs = () => {
     <ul>
       {tabs.map((tab) => (
         <li key={tab.id}>
-          <a href="#" onClick={() => handleTabClick(tab.id)}>
+          <a href="#" onClick={() => handleTabClick(tab.id)} className="">
             {tab.title}
           </a>
         </li>

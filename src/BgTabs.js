@@ -14,7 +14,7 @@ const BgTabs = () => {
 
   useEffect(() => {
     chromeQuery();
-  }, [tabs]);
+  }, []);
 
   const handleTabClick = (tabId) => {
     chrome.tabs.update(tabId, { active: true });
@@ -26,14 +26,15 @@ const BgTabs = () => {
   };
 
   return (
-    <>
+    <div className="mb-8">
       <ul className="p-3 min-w-60 mb-6">
         {tabs.map((tab) => (
-          <li key={tab.id} className="mb-3">
+          <li key={tab.id} className="mb-3 flex gap-2 items-center">
+            <img src={tab.favIconUrl} className="w-4 h-4 mr-2" />
             <a
               href="#"
               onClick={() => handleTabClick(tab.id)}
-              className="text-sm underline line-clamp-2"
+              className="text-sm underline line-clamp-1 text-gray-500"
             >
               {tab.title}
             </a>
@@ -55,7 +56,7 @@ const BgTabs = () => {
           Save list
         </button>
       </div>
-    </>
+    </div>
   );
 };
 

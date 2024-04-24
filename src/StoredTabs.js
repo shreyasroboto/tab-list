@@ -26,22 +26,24 @@ const StoredTabs = () => {
     <div>
       <p className="text-lg">Lists / workspaces</p>
       {storedTabs.map((tab) => (
-        <div className="flex gap-2 mb-3">
+        <div className="flex gap-2 mb-3 justify-between items-center">
           <p key={tab[0]} className="text-base">
             {tab[0]}
           </p>
-          <button
-            className="bg-blue-400 p-2 rounded-md"
-            onClick={() => openTabs(tab[1])}
-          >
-            Open Tabs
-          </button>
-          <button
-            className="bg-red-400 p-2 rounded-md"
-            onClick={() => removeList(tab[0])}
-          >
-            Delete list
-          </button>
+          <div className="ml-auto flex gap-2">
+            <button
+              className="bg-blue-400 p-2 rounded-md text-white"
+              onClick={() => openTabs(tab[1])}
+            >
+              Open Tabs
+            </button>
+            <button
+              className="bg-red-400 p-2 rounded-md text-white"
+              onClick={() => removeList(tab[0])}
+            >
+              Delete list
+            </button>
+          </div>
         </div>
       ))}
     </div>

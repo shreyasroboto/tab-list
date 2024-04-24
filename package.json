@@ -1,0 +1,20 @@
+{
+  "name": "tab-list",
+  "version": "0.1",
+  "description": "Extension to manage tabs",
+  "source": "index.js",
+  "scripts": {
+    "dev": "parcel watch manifest.json --host localhost --config @parcel/config-webextension",
+    "build": "parcel build manifest.json --config @parcel/config-webextension",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "parcel": "^2.12.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@parcel/config-webextension": "^2.12.0",
+    "process": "^0.11.10"
+  }
+}

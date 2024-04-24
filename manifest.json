@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Tab List",
+  "version": "0.1",
+  "description": "Tabs management",
+  "permissions": ["storage", "clipboardWrite", "tabs", "activeTab"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "action": {
+    "default_title": "Tab List",
+    "default_popup": "index.html"
+  }
+}
